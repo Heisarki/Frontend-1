@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: 'Courier New', Courier, monospace;
     color: #B1A592;
+    transition: all 500ms;
 }
 
 body{
@@ -286,7 +287,29 @@ p {
     transform: scale(1.1);
 }
 
+.menu {
+    /* display: none; */
+    border: 1px solid #B1A592;
+    padding: 5px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 400;
+}
+.menu:hover {
+    background-color: #8E886D;
+    color: #333333;
+}
+
 @media only screen and (max-width: 1280px) {
+    .menu {
+        display: flex;
+    }
+    .company {
+        flex-grow: 1;
+        justify-content: center;
+        text-align: center;
+    }
     .card-row-container{
         flex-direction: column;
     }
@@ -304,4 +327,54 @@ p {
     .last-row {
         flex-direction: row;
     }
+
+    .nav {
+        display: none;
+    }
   }
+
+  @media only screen and (max-width: 900px) {
+    .last-row {
+        flex-direction: column;
+    }  
+    .card-3 {
+        width: 100%;
+    }
+    .card-3 .image-container {
+        width: 100%;
+    }
+    .card-3 .image-container img {
+        width: 100%;
+    }
+
+    .card-2 {
+        height: max-content;
+        justify-content: center;
+        align-items: center;
+    }
+    .card-2-row {
+        width: 100%;
+    }
+
+    .card-2 .image-container {
+        border-radius: 20px;
+        overflow: hidden;
+        width: 100%;
+    }
+    .card-2 .image-container img {
+        width: 100%;
+        transform: scale(1.1);
+    }
+    .card-2 .image-container img:hover {
+        transform: scale(1.2);
+    }
+
+    .card-2-row {
+        flex-direction: column;
+    }
+
+    .card-4 {
+        width: 100%;
+        height: fit-content;
+    }
+}
